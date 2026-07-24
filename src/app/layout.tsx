@@ -1,27 +1,23 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Playfair_Display, Montserrat } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const playfair = Playfair_Display({
+  variable: "--font-serif",
   subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const montserrat = Montserrat({
+  variable: "--font-sans",
   subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700", "800"],
 });
 
 export const metadata: Metadata = {
-  title: "SIRAA Interiors | Premium Woodwork & Custom Furniture",
-  description: "Bringing elegance indoors. SIRAA Interiors provides custom carpentry, wardrobe cupboards, solid-wood main doors, beds, sofas, and dining tables across Andhra Pradesh, Tamil Nadu, Kerala, Karnataka, and Telangana.",
-  keywords: ["SIRAA Interiors", "carpentry", "woodwork", "cupboards", "wardrobes", "main doors", "custom furniture", "dining table", "bed cot", "wood polish", "Sathyavedu", "Andhra Pradesh", "Tamil Nadu", "Kerala", "Karnataka", "Telangana"],
-  openGraph: {
-    title: "SIRAA Interiors | Premium Woodwork & Custom Furniture",
-    description: "Bringing elegance indoors. Over 20 years of craftsmanship experience in wardrobes, designer doors, and custom wood furniture.",
-    type: "website",
-    locale: "en_IN",
-  }
+  title: "SIRAA Interiors | Custom Woodworks & Furniture",
+  description: "SIRAA Interiors brings elegance indoors. Seasoned carpentry and woodworks with 20+ years experience based in Sathyavedu, Andhra Pradesh, servicing Tamil Nadu, Andhra Pradesh, Karnataka, Telangana, and Kerala.",
+  keywords: "Siraa Interiors, carpentry, woodworks, cupboard rates, main doors, custom furniture, wardrobes, cots, cots and beds, custom dining table, study desk, coffee tables, Tamil Nadu, Andhra Pradesh, Sathyavedu, Kerala, Karnataka",
 };
 
 export default function RootLayout({
@@ -30,9 +26,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body>{children}</body>
+    <html
+      lang="en"
+      suppressHydrationWarning={true}
+      className={`${playfair.variable} ${montserrat.variable} h-full antialiased scroll-smooth`}
+    >
+      <body className="min-h-full flex flex-col bg-stone-950 font-sans text-cream">
+        {children}
+      </body>
     </html>
   );
 }
-
