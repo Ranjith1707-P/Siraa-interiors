@@ -1,0 +1,178 @@
+.introContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #0b0908;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  perspective: 1200px;
+}
+
+.scene3d {
+  position: relative;
+  width: 200px;
+  height: 300px;
+  transform-style: preserve-3d;
+  margin-bottom: 40px;
+}
+
+/* Base style for cabinet panels */
+.panel {
+  position: absolute;
+  background: linear-gradient(135deg, #27211d 0%, #1a1613 100%);
+  border: 2px solid var(--accent-gold);
+  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.8), 0 0 10px rgba(207, 168, 123, 0.2);
+}
+
+.backPanel {
+  width: 200px;
+  height: 300px;
+  transform: translateZ(-50px);
+  background: linear-gradient(135deg, #1f1a17 0%, #15110f 100%);
+}
+
+.leftPanel {
+  width: 100px;
+  height: 300px;
+  left: -50px;
+  transform: rotateY(90deg) translateZ(0);
+  background: #1c1815;
+}
+
+.rightPanel {
+  width: 100px;
+  height: 300px;
+  right: -50px;
+  transform: rotateY(-90deg) translateZ(0);
+  background: #1c1815;
+}
+
+.topPanel {
+  width: 200px;
+  height: 100px;
+  top: -50px;
+  transform: rotateX(90deg) translateZ(0);
+  background: #251e1a;
+}
+
+.bottomPanel {
+  width: 200px;
+  height: 100px;
+  bottom: -50px;
+  transform: rotateX(-90deg) translateZ(0);
+  background: #181412;
+}
+
+/* Double Doors */
+.door {
+  position: absolute;
+  width: 100px;
+  height: 300px;
+  top: 0;
+  background: linear-gradient(135deg, #3e322a 0%, #27211d 100%);
+  border: 2px solid var(--accent-gold);
+  box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.6);
+  transform-style: preserve-3d;
+  transition: transform 1.2s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.leftDoor {
+  left: 0;
+  transform-origin: left center;
+  transform: translateZ(50px) rotateY(0deg);
+}
+
+.rightDoor {
+  right: 0;
+  transform-origin: right center;
+  transform: translateZ(50px) rotateY(0deg);
+}
+
+/* Handle details */
+.handle {
+  position: absolute;
+  top: 50%;
+  width: 6px;
+  height: 40px;
+  background: var(--accent-gold);
+  box-shadow: 0 0 8px var(--accent-gold);
+  transform: translateY(-50%);
+}
+
+.leftDoor .handle {
+  right: 8px;
+  border-radius: 4px 0 0 4px;
+}
+
+.rightDoor .handle {
+  left: 8px;
+  border-radius: 0 4px 4px 0;
+}
+
+/* Interior glow when doors open */
+.glow {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+  background: radial-gradient(circle, rgba(207, 168, 123, 0.8) 0%, rgba(207, 168, 123, 0) 70%);
+  transform: translateZ(0);
+  opacity: 0;
+  mix-blend-mode: screen;
+  transition: opacity 0.8s ease;
+  pointer-events: none;
+}
+
+/* Intro Text */
+.textContainer {
+  text-align: center;
+  transform-style: preserve-3d;
+  z-index: 10;
+}
+
+.title {
+  font-family: var(--font-serif);
+  font-size: 3rem;
+  letter-spacing: 0.25em;
+  color: var(--text-primary);
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  text-shadow: 0 0 20px rgba(207, 168, 123, 0.3);
+}
+
+.subtitle {
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  letter-spacing: 0.5em;
+  color: var(--accent-gold);
+  text-transform: uppercase;
+  opacity: 0.8;
+}
+
+.skipButton {
+  position: absolute;
+  bottom: 40px;
+  background: transparent;
+  border: 1px solid rgba(207, 168, 123, 0.3);
+  color: var(--text-secondary);
+  padding: 8px 20px;
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  cursor: pointer;
+  border-radius: 20px;
+  transition: var(--transition-fast);
+}
+
+.skipButton:hover {
+  border-color: var(--accent-gold);
+  color: var(--accent-gold);
+  background: rgba(207, 168, 123, 0.05);
+}
