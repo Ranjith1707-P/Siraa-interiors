@@ -13,8 +13,8 @@ const navLinks: NavLink[] = [
   { label: "Services", href: "#services" },
   { label: "Gallery", href: "#gallery" },
   { label: "Estimator", href: "#estimator" },
-  { label: "Reviews", href: "#reviews" },
   { label: "Contact", href: "#contact" },
+  { label: "Reviews", href: "#reviews" },
 ];
 
 export default function Navbar() {

@@ -215,11 +215,11 @@ export default function Home() {
           {/* ESTIMATOR SECTION */}
           <Estimator />
 
-          {/* REVIEWS SECTION */}
-          <Reviews />
-
           {/* CONTACT & FAQ SECTION */}
           <ContactForm />
+
+          {/* REVIEWS SECTION */}
+          <Reviews />
 
           {/* FOOTER */}
           <footer className="relative z-50 bg-stone-950 border-t border-stone-900 py-8 md:py-12">
@@ -250,8 +250,9 @@ export default function Home() {
                   <ul className="space-y-2 text-stone-500 text-xs font-medium">
                     <li><a href="#services" className="hover:text-gold-premium transition-colors">Woodwork Services</a></li>
                     <li><a href="#gallery" className="hover:text-gold-premium transition-colors">Portfolio Gallery</a></li>
-                    <li><a href="#estimator" className="hover:text-gold-premium transition-colors">Labor Cost Planner</a></li>
-                    <li><a href="#reviews" className="hover:text-gold-premium transition-colors font-serif italic text-gold-accent font-semibold">Client Reviews</a></li>
+                    <li><a href="#estimator" className="hover:text-gold-premium transition-colors font-serif italic text-gold-accent font-semibold">Labor Cost Planner</a></li>
+                    <li><a href="#contact" className="hover:text-gold-premium transition-colors">Contact Us</a></li>
+                    <li><a href="#reviews" className="hover:text-gold-premium transition-colors">Client Reviews</a></li>
                   </ul>
                 </div>
 
