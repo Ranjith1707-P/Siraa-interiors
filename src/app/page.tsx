@@ -230,11 +230,11 @@ export default function Home() {
                 {/* Branding column */}
                 <div className="space-y-4 col-span-1">
                   <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-lg border border-stone-800 bg-white flex items-center justify-center overflow-hidden p-0.5">
+                    <div className="w-10 h-10 rounded-lg border border-stone-800 flex items-center justify-center overflow-hidden">
                       <img
                         src="/logo.jpg"
                         alt="SIRAA Logo"
-                        className="w-full h-full object-cover rounded-md"
+                        className="w-full h-full object-cover scale-[1.15]"
                       />
                     </div>
                     <span className="text-cream font-serif text-base font-bold tracking-widest">SIRAA INTERIORS</span>

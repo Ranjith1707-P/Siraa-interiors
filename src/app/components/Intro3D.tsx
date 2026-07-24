@@ -88,11 +88,11 @@ export default function Intro3D({ onComplete }: Intro3DProps) {
           style={{ transform: "translateZ(-80px)" }}
         >
           {/* Glowing emblem inside */}
-          <div className="w-28 h-28 rounded-2xl border border-gold-premium/30 bg-white flex items-center justify-center shadow-md relative overflow-hidden animate-pulse mb-6 p-1.5">
+          <div className="w-28 h-28 rounded-2xl border border-gold-premium/30 flex items-center justify-center shadow-md relative overflow-hidden animate-pulse mb-6">
             <img
               src="/logo.jpg"
               alt="SIRAA Logo"
-              className="w-full h-full rounded-xl object-contain"
+              className="w-full h-full object-cover scale-[1.15]"
             />
           </div>
           <h2 className="text-2xl md:text-3xl font-serif text-cream font-bold tracking-widest text-center uppercase">

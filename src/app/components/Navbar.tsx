@@ -66,11 +66,11 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-12">
           {/* Logo and Brand */}
           <a href="#" className="flex items-center gap-3 group">
-            <div className="w-10 h-10 rounded-lg border border-stone-800 bg-white flex items-center justify-center overflow-hidden p-0.5 transition-all duration-300 group-hover:border-gold-premium/50 shadow-md">
+            <div className="w-10 h-10 rounded-lg border border-stone-800 flex items-center justify-center overflow-hidden transition-all duration-300 group-hover:border-gold-premium/50 shadow-md">
               <img
                 src="/logo.jpg"
                 alt="SIRAA Logo"
-                className="w-full h-full object-cover rounded-md"
+                className="w-full h-full object-cover scale-[1.15]"
               />
             </div>
             <div className="flex flex-col">
