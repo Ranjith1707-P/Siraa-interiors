@@ -53,15 +53,15 @@ export default function Home() {
           <Navbar />
 
           {/* HERO SECTION */}
-          <header className="relative min-h-screen flex items-center justify-center p-[70px_32px_32px_32px] max-[900px]:p-[90px_18px_32px_18px] overflow-hidden bg-black/40 backdrop-blur-[1px] z-10">
+          <header className="relative min-h-screen max-[900px]:min-h-[85vh] flex items-center justify-center p-[70px_32px_32px_32px] max-[900px]:p-[80px_16px_24px_16px] overflow-hidden bg-black/40 backdrop-blur-[1px] z-10">
             {/* Background texture line overlay */}
             <div className="absolute inset-0 wood-grain opacity-5 pointer-events-none" />
 
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
-              <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-12 items-center">
                 
                 {/* Hero Text */}
-                <div className="lg:col-span-7 space-y-6 text-center lg:text-left flex flex-col items-center lg:items-start max-w-[720px] mx-auto lg:mx-0">
+                <div className="lg:col-span-7 space-y-4 md:space-y-6 text-center lg:text-left flex flex-col items-center lg:items-start max-w-[720px] mx-auto lg:mx-0">
                   <FadeUp
                     as="div"
                     delay={0.05}
@@ -94,15 +94,15 @@ export default function Home() {
                     as="p"
                     delay={0.9}
                     y={24}
-                    className="mt-6 font-sans text-sm md:text-base leading-relaxed text-white/85 max-w-[420px]"
+                    className="mt-4 md:mt-6 font-sans text-sm md:text-base leading-relaxed text-white/85 max-w-[420px]"
                   >
-                    Custom high-quality woodwork crafted to perfection. From modular box cupboards to carved teakwood main doors, cots, sofas, and custom dining tables. Get direct expert labors with 100% transparent pricing.
+                    Custom high-quality woodwork crafted to perfection. From modular cupboards to carved teakwood doors, cots, and sofas. Get direct expert labor with transparent pricing.
                   </FadeUp>
 
                   <FadeUp
                     delay={1.1}
                     y={24}
-                    className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-4 w-full"
+                    className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3 pt-3 md:gap-4 md:pt-4 w-full"
                   >
                     <a
                       href="#estimator"
@@ -117,15 +117,44 @@ export default function Home() {
                       Book Free Consultation <ArrowRight className="w-4 h-4" />
                     </a>
                   </FadeUp>
+
+                  {/* Compact Stats Row */}
+                  <FadeUp
+                    delay={1.2}
+                    y={20}
+                    className="grid grid-cols-3 gap-6 pt-6 border-t border-white/10 w-full max-w-[450px] text-center lg:text-left"
+                  >
+                    <div>
+                      <div className="text-lg md:text-xl font-serif font-bold text-gold-premium">20+ Yrs</div>
+                      <div className="text-[10px] text-stone-400 uppercase tracking-wider font-semibold">Experience</div>
+                    </div>
+                    <div>
+                      <div className="text-lg md:text-xl font-serif font-bold text-gold-premium">100%</div>
+                      <div className="text-[10px] text-stone-400 uppercase tracking-wider font-semibold">Happy Clients</div>
+                    </div>
+                    <div>
+                      <div className="text-lg md:text-xl font-serif font-bold text-gold-premium">Direct</div>
+                      <div className="text-[10px] text-stone-400 uppercase tracking-wider font-semibold">Labor Pricing</div>
+                    </div>
+                  </FadeUp>
+
+                  {/* Available Locations Tag */}
+                  <FadeUp
+                    delay={1.3}
+                    y={15}
+                    className="text-[11px] text-stone-500 font-sans tracking-wide mt-2 w-full text-center lg:text-left"
+                  >
+                    <span className="text-gold-accent font-semibold">Serving:</span> Chennai, Tirupati, Nellore, Bengaluru, Hyderabad & South India
+                  </FadeUp>
                 </div>
 
                 {/* Hero Badge Showcase Box */}
-                <div className="lg:col-span-5 flex flex-col items-center justify-center gap-6">
+                <div className="lg:col-span-5 flex flex-col items-center justify-center gap-4 md:gap-6">
                   <motion.div
                     initial={{ opacity: 0, scale: 0.9, rotateY: 15 }}
                     animate={{ opacity: 1, scale: 1, rotateY: 0 }}
                     transition={{ delay: 0.4, duration: 1 }}
-                    className="relative w-full max-w-[360px] aspect-[4/5] wood-grain rounded-2xl border border-stone-850 p-8 shadow-2xl flex flex-col justify-between overflow-hidden"
+                    className="relative w-full max-w-[360px] aspect-[4/5] wood-grain rounded-2xl border border-stone-850 p-5 md:p-8 shadow-2xl flex flex-col justify-between overflow-hidden"
                   >
                     {/* Shadow box borders */}
                     <div className="absolute inset-4 border border-gold-premium/10 rounded-xl" />
@@ -177,69 +206,6 @@ export default function Home() {
             <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-stone-950 to-transparent pointer-events-none" />
           </header>
 
-          {/* HERITAGE & COUNTER SECTION */}
-          <section id="experience" className="relative z-50 py-20 bg-stone-950 border-t border-stone-900">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-              
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                
-                <div className="bg-stone-900/30 border border-stone-850 p-6 rounded-xl text-center space-y-3">
-                  <div className="w-12 h-12 bg-gold-premium/10 rounded-full flex items-center justify-center text-gold-premium mx-auto">
-                    <Hammer className="w-6 h-6" />
-                  </div>
-                  <h3 className="text-3xl font-serif font-bold text-cream">20+ Years</h3>
-                  <p className="text-stone-500 text-xs uppercase tracking-wider font-semibold">
-                    Timber Experience
-                  </p>
-                  <p className="text-stone-400 text-xs">
-                    Two decades crafting high-end domestic cupboards, frames, and furniture.
-                  </p>
-                </div>
-
-                <div className="bg-stone-900/30 border border-stone-850 p-6 rounded-xl text-center space-y-3">
-                  <div className="w-12 h-12 bg-gold-premium/10 rounded-full flex items-center justify-center text-gold-premium mx-auto">
-                    <Heart className="w-6 h-6" />
-                  </div>
-                  <h3 className="text-3xl font-serif font-bold text-cream">100% Happy</h3>
-                  <p className="text-stone-500 text-xs uppercase tracking-wider font-semibold">
-                    Customer Smiles
-                  </p>
-                  <p className="text-stone-400 text-xs">
-                    Our clients appreciate the transparent labor rates and flawless woodwork.
-                  </p>
-                </div>
-
-                <div className="bg-stone-900/30 border border-stone-850 p-6 rounded-xl text-center space-y-3">
-                  <div className="w-12 h-12 bg-gold-premium/10 rounded-full flex items-center justify-center text-gold-premium mx-auto">
-                    <Users className="w-6 h-6" />
-                  </div>
-                  <h3 className="text-3xl font-serif font-bold text-cream">Experienced</h3>
-                  <p className="text-stone-500 text-xs uppercase tracking-wider font-semibold">
-                    Artisans & Labours
-                  </p>
-                  <p className="text-stone-400 text-xs">
-                    Dedicated workers focused on precision carving, polish, and fittings.
-                  </p>
-                </div>
-
-                <div className="bg-stone-900/30 border border-stone-850 p-6 rounded-xl text-center space-y-3">
-                  <div className="w-12 h-12 bg-gold-premium/10 rounded-full flex items-center justify-center text-gold-premium mx-auto">
-                    <MapPin className="w-6 h-6" />
-                  </div>
-                  <h3 className="text-3xl font-serif font-bold text-cream">5 States</h3>
-                  <p className="text-stone-500 text-xs uppercase tracking-wider font-semibold">
-                    South India Coverage
-                  </p>
-                  <p className="text-stone-400 text-xs">
-                    AP, Tamil Nadu, Kerala, Telangana, Karnataka, and open to custom requests anywhere.
-                  </p>
-                </div>
-
-              </div>
-
-            </div>
-          </section>
-
           {/* SERVICES SECTION */}
           <Services />
 
@@ -256,13 +222,13 @@ export default function Home() {
           <ContactForm />
 
           {/* FOOTER */}
-          <footer className="relative z-50 bg-stone-950 border-t border-stone-900 py-12">
+          <footer className="relative z-50 bg-stone-950 border-t border-stone-900 py-8 md:py-12">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               
               <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
                 
                 {/* Branding column */}
-                <div className="space-y-4 col-span-1 md:col-span-2">
+                <div className="space-y-4 col-span-1">
                   <div className="flex items-center gap-3">
                     <div className="w-10 h-10 rounded-lg border border-stone-800 bg-white flex items-center justify-center overflow-hidden p-0.5">
                       <img
@@ -273,8 +239,8 @@ export default function Home() {
                     </div>
                     <span className="text-cream font-serif text-base font-bold tracking-widest">SIRAA INTERIORS</span>
                   </div>
-                  <p className="text-stone-500 text-xs leading-relaxed max-w-sm">
-                    Bringing elegance indoors since 2006. Dedicated to direct-labor woodwork, offering high transparency, fine wood finishing, and custom solid furniture for upper middle and middle-class homes.
+                  <p className="text-stone-500 text-xs leading-relaxed">
+                    Bringing elegance indoors since 2006. Dedicated to direct-labor woodwork, fine finishing, and transparent pricing.
                   </p>
                 </div>
 
@@ -283,9 +249,20 @@ export default function Home() {
                   <h4 className="text-cream font-serif text-xs uppercase tracking-widest font-bold">Quick Links</h4>
                   <ul className="space-y-2 text-stone-500 text-xs font-medium">
                     <li><a href="#services" className="hover:text-gold-premium transition-colors">Woodwork Services</a></li>
+                    <li><a href="#gallery" className="hover:text-gold-premium transition-colors">Portfolio Gallery</a></li>
                     <li><a href="#estimator" className="hover:text-gold-premium transition-colors">Labor Cost Planner</a></li>
-                    <li><a href="#experience" className="hover:text-gold-premium transition-colors">Our Experience</a></li>
-                    <li><a href="#reviews" className="hover:text-gold-premium transition-colors font-serif italic text-gold-accent">Client Reviews</a></li>
+                    <li><a href="#reviews" className="hover:text-gold-premium transition-colors font-serif italic text-gold-accent font-semibold">Client Reviews</a></li>
+                  </ul>
+                </div>
+
+                {/* Service Areas */}
+                <div className="space-y-3">
+                  <h4 className="text-cream font-serif text-xs uppercase tracking-widest font-bold">Service Areas</h4>
+                  <ul className="space-y-1.5 text-stone-500 text-xs font-medium">
+                    <li>Chennai • Bengaluru</li>
+                    <li>Hyderabad • Tirupati</li>
+                    <li>Nellore • Chittoor</li>
+                    <li>Vellore • Kadapa</li>
                   </ul>
                 </div>
 

@@ -70,7 +70,7 @@ export default function Intro3D({ onComplete }: Intro3DProps) {
       <motion.div
         animate={isOpen ? { scale: 1.4, z: 200 } : { scale: 1 }}
         transition={{ duration: 2, ease: [0.7, 0, 0.3, 1] }}
-        className="relative w-[340px] h-[480px] md:w-[480px] md:h-[600px] preserve-3d"
+        className="relative w-[85vw] h-[120vw] sm:w-[340px] sm:h-[480px] md:w-[480px] md:h-[600px] preserve-3d"
       >
         {/* Inside Light burst revealed when doors open */}
         {isOpen && (

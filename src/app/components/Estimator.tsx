@@ -79,39 +79,39 @@ export default function Estimator() {
   };
 
   return (
-    <section id="estimator" className="py-24 bg-stone-900 relative overflow-hidden">
+    <section id="estimator" className="py-12 md:py-24 bg-stone-900 relative overflow-hidden">
       {/* Decorative Blur Backgrounds */}
       <div className="absolute left-1/4 top-1/3 w-[250px] h-[250px] bg-gold-premium/5 rounded-full filter blur-[120px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Title */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
+        <div className="text-center max-w-3xl mx-auto mb-10 md:mb-16">
           <span className="text-gold-premium font-serif text-sm tracking-[0.3em] uppercase block mb-3">
             Budget Planner
           </span>
           <h2 className="text-3xl md:text-5xl font-serif font-bold text-cream mb-4">
             Labor Cost Estimator
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-gold-premium to-gold-accent mx-auto mb-6" />
+          <div className="w-24 h-1 bg-gradient-to-r from-gold-premium to-gold-accent mx-auto mb-4 md:mb-6" />
           <p className="text-stone-400 font-sans text-sm md:text-base leading-relaxed">
-            Specify the approximate width and height of your wardrobes or cabinets to calculate your direct labor charges instantly.
+            Specify cupboard dimensions to estimate your direct carpentry labor charges instantly.
           </p>
         </div>
 
         {/* Dynamic Calculator Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-stretch">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-12 items-stretch">
           
           {/* Form Sliders & Controls */}
-          <div className="lg:col-span-7 bg-stone-950/60 border border-stone-850 p-6 md:p-8 rounded-2xl flex flex-col justify-between shadow-xl">
-            <div className="space-y-8">
+          <div className="lg:col-span-7 bg-stone-950/60 border border-stone-850 p-5 md:p-8 rounded-2xl flex flex-col justify-between shadow-xl">
+            <div className="space-y-6 md:space-y-8">
               
               {/* Type Selection */}
               <div>
-                <label className="text-stone-400 font-sans text-xs tracking-wider uppercase font-semibold block mb-4">
+                <label className="text-stone-400 font-sans text-xs tracking-wider uppercase font-semibold block mb-3 md:mb-4">
                   Select Cupboard Type
                 </label>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 md:gap-4">
                   <button
                     onClick={() => setWorkType("normal")}
                     className={`flex flex-col p-4 rounded-xl border text-left transition-all duration-300 ${
@@ -124,7 +124,7 @@ export default function Estimator() {
                       Normal Cupboard
                     </span>
                     <span className="text-stone-500 text-xs mt-1 leading-relaxed">
-                      Built directly on existing walls / niches. Perfect for cost-effectiveness. (₹180 - ₹250 / sq.ft)
+                      Built directly on existing walls. Cost-effective. (₹180 - ₹250/sq.ft)
                     </span>
                   </button>
 
@@ -140,14 +140,14 @@ export default function Estimator() {
                       Full Box Cupboard
                     </span>
                     <span className="text-stone-500 text-xs mt-1 leading-relaxed">
-                      Features full back panel, double sides, and sturdy self-contained box frames. (₹300 - ₹350 / sq.ft)
+                      Self-contained box frame with back and side panels. (₹300 - ₹350/sq.ft)
                     </span>
                   </button>
                 </div>
               </div>
 
               {/* Dimension Sliders */}
-              <div className="space-y-6">
+              <div className="space-y-4 md:space-y-6">
                 <div>
                   <div className="flex justify-between items-center mb-2">
                     <span className="text-stone-400 text-xs uppercase tracking-wider font-semibold">
@@ -218,21 +218,21 @@ export default function Estimator() {
             </div>
 
             {/* Disclaimer */}
-            <div className="mt-8 flex gap-3 p-3 bg-stone-900/50 border border-stone-800/40 rounded-lg">
+            <div className="mt-5 md:mt-8 flex gap-3 p-3 bg-stone-900/50 border border-stone-800/40 rounded-lg">
               <HelpCircle className="w-4 h-4 text-stone-500 mt-0.5 flex-shrink-0" />
               <p className="text-[11px] text-stone-500 leading-relaxed">
-                Prices shown are direct estimates for **carpentry and installation labor only**. Hardware fitting, materials, veneer polishing, laminate pasting, transport, and worker food expenses differ according to your local material store and site locations.
+                Estimates are for **carpentry and installation labor only**. Materials, hardware, polishing, and transport depend on your site location.
               </p>
             </div>
 
           </div>
 
           {/* Visual Display Output */}
-          <div className="lg:col-span-5 bg-gradient-to-br from-wood-dark via-stone-950 to-stone-950 border border-stone-850 p-6 md:p-8 rounded-2xl flex flex-col justify-between shadow-2xl relative overflow-hidden">
+          <div className="lg:col-span-5 bg-gradient-to-br from-wood-dark via-stone-950 to-stone-950 border border-stone-850 p-5 md:p-8 rounded-2xl flex flex-col justify-between shadow-2xl relative overflow-hidden">
             <div className="absolute top-0 right-0 w-48 h-48 bg-gold-premium/5 rounded-full filter blur-3xl pointer-events-none" />
 
             {/* Wardrobe Resizing Preview Mockup */}
-            <div className="flex-1 flex flex-col justify-center items-center py-6 min-h-[220px]">
+            <div className="flex-1 flex flex-col justify-center items-center py-4 min-h-[190px] md:py-6 md:min-h-[220px]">
               <span className="text-[10px] text-stone-500 uppercase tracking-widest block mb-4 font-semibold">
                 Simulated Scale Profile
               </span>
@@ -274,7 +274,7 @@ export default function Estimator() {
             </div>
 
             {/* Calculations and Rates */}
-            <div className="space-y-4 pt-6 border-t border-stone-800/80">
+            <div className="space-y-3 pt-4 md:space-y-4 md:pt-6 border-t border-stone-800/80">
               <div className="flex justify-between items-center text-sm">
                 <span className="text-stone-400">Total Area:</span>
                 <span className="text-cream font-mono font-semibold">{totalSqFt} sq. ft.</span>
@@ -285,7 +285,7 @@ export default function Estimator() {
                 <span className="text-gold-accent font-mono font-semibold">₹{ratePerSqFt}</span>
               </div>
 
-              <div className="bg-stone-900/80 rounded-xl p-4 border border-stone-800 text-center">
+              <div className="bg-stone-900/80 rounded-xl p-3 md:p-4 border border-stone-800 text-center">
                 <span className="text-[10px] text-stone-500 uppercase tracking-wider font-semibold block mb-1">
                   Estimated Direct Labor Cost
                 </span>

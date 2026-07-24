@@ -21,24 +21,16 @@ interface FAQItem {
 
 const faqs: FAQItem[] = [
   {
-    question: "Which states/cities do you service in South India?",
-    answer: "We are based in Sathyavedu, AP (near the Tamil Nadu border). We regularly service Andhra Pradesh, Tamil Nadu (including Chennai and surrounding areas), Karnataka, Telangana, and Kerala. For large projects, we are open to travelling anywhere in South India."
-  },
-  {
     question: "How does the direct labor model save me money?",
-    answer: "Traditional interior design firms pack heavy markups on materials, charging ₹800 - ₹1200+ per sq.ft. With us, you purchase materials directly from the vendor at local retail rates (with zero markup from us). You only pay our direct carpentry labor cost (₹180 - ₹350 per sq.ft depending on wardrobe type). This saves you up to 40% on overall budgets."
+    answer: "You buy materials directly at vendor cost (zero markup). You only pay our direct carpentry labor cost (₹180-₹350/sq.ft), saving up to 40% compared to full-service interior firms."
   },
   {
-    question: "What wood/plywood do you recommend for wardrobes?",
-    answer: "For damp-prone areas like kitchens and bathrooms, we recommend BWP (Boiling Water Proof) or BWR (Boiling Water Resistant) plywood. For bedroom wardrobes and general cupboards, MR (Moisture Resistant) commercial ply works great when finished with premium laminate, veneer, or acrylic sheets."
+    question: "Which states do you service in South India?",
+    answer: "We are based in Sathyavedu, AP. We regularly service Andhra Pradesh, Tamil Nadu (including Chennai), Karnataka, Kerala, and Telangana."
   },
   {
-    question: "Do you design custom hand-carved doors?",
-    answer: "Yes, absolutely! We specialize in premium carpentry, including custom hand-carved main doors made from solid Teak wood, Rosewood, or Sal wood. You can provide any pattern, and our master craftsmen will handcraft it with exceptional detail."
-  },
-  {
-    question: "Is the site consultation free?",
-    answer: "Initial consulting, estimate discussions, and video/photo assessments via WhatsApp are 100% free. For physical site visits and measurements, we offer free services within local limits, and charge a minor nominal travel fee for distant locations, which gets adjusted into the final labor bill."
+    question: "What wood/plywood do you recommend?",
+    answer: "For moisture-heavy areas like kitchens, we recommend Boiling Water Proof (BWP) plywood. For cupboards and wardrobes, Moisture Resistant (MR) plywood works excellent."
   }
 ];
 
@@ -123,7 +115,7 @@ export default function ContactForm() {
   };
 
   return (
-    <section id="contact" className="py-24 bg-stone-950 relative overflow-hidden border-t border-stone-900">
+    <section id="contact" className="py-12 md:py-24 bg-stone-950 relative overflow-hidden border-t border-stone-900">
       {/* Background Decorative Blurs */}
       <div className="absolute right-1/4 bottom-1/4 w-[300px] h-[300px] bg-wood-light/10 rounded-full filter blur-[120px] pointer-events-none" />
       <div className="absolute left-10 top-1/4 w-[200px] h-[200px] bg-gold-premium/5 rounded-full filter blur-[100px] pointer-events-none" />
@@ -131,26 +123,26 @@ export default function ContactForm() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
+        <div className="text-center max-w-3xl mx-auto mb-10 md:mb-16">
           <span className="text-gold-premium font-serif text-sm tracking-[0.3em] uppercase block mb-3">
             Get In Touch
           </span>
           <h2 className="text-3xl md:text-5xl font-serif font-bold text-cream mb-4">
             Start Your Woodwork Journey
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-gold-premium to-gold-accent mx-auto mb-6" />
+          <div className="w-24 h-1 bg-gradient-to-r from-gold-premium to-gold-accent mx-auto mb-4 md:mb-6" />
           <p className="text-stone-400 font-sans text-sm md:text-base leading-relaxed">
-            Fill out our inquiry form to plan your carpentry design or request a direct callback from our master carpenter.
+            Fill out the form or contact us directly to request a call.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-12 items-start">
           
           {/* LEFT COLUMN: FAQ & CONTACT INFO */}
-          <div className="lg:col-span-6 space-y-10">
+          <div className="lg:col-span-6 space-y-6 md:space-y-10">
             
             {/* Contact Details */}
-            <div className="bg-stone-900/30 border border-stone-900 p-6 md:p-8 rounded-2xl space-y-6">
+            <div className="bg-stone-900/30 border border-stone-900 p-5 md:p-8 rounded-2xl space-y-4 md:space-y-6">
               <h3 className="text-xl font-serif font-bold text-cream">
                 Direct Communications
               </h3>
@@ -265,7 +257,7 @@ export default function ContactForm() {
 
           {/* RIGHT COLUMN: LEAD FORM */}
           <div className="lg:col-span-6">
-            <div className="bg-gradient-to-br from-wood-dark via-stone-950 to-stone-950 border border-stone-850 p-6 md:p-8 rounded-2xl shadow-2xl relative overflow-hidden">
+            <div className="bg-gradient-to-br from-wood-dark via-stone-950 to-stone-950 border border-stone-850 p-5 md:p-8 rounded-2xl shadow-2xl relative overflow-hidden">
               <div className="absolute top-0 right-0 w-32 h-32 bg-gold-premium/5 rounded-full filter blur-2xl pointer-events-none" />
               
               <h3 className="text-2xl font-serif font-bold text-cream mb-6">
@@ -371,6 +363,7 @@ export default function ContactForm() {
                         <option value="Sofas, Tables & Chairs">Sofas, Tables & Chairs</option>
                         <option value="Custom Furniture">Custom Furniture</option>
                         <option value="Full Home Interior">Full Home Interior</option>
+                        <option value="Other Custom Work">(Other Work) Custom Works</option>
                       </select>
                     </div>
 
